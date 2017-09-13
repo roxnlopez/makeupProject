@@ -1,0 +1,28 @@
+[debug] [2017-09-13T17:31:03.308Z] ----------------------------------------------------------------------
+[debug] [2017-09-13T17:31:03.312Z] Command:       /usr/local/Cellar/node/8.1.2/bin/node /usr/local/bin/firebase serve
+[debug] [2017-09-13T17:31:03.312Z] CLI Version:   3.10.1
+[debug] [2017-09-13T17:31:03.313Z] Platform:      darwin
+[debug] [2017-09-13T17:31:03.313Z] Node Version:  v8.1.2
+[debug] [2017-09-13T17:31:03.314Z] Time:          Wed Sep 13 2017 11:31:03 GMT-0600 (MDT)
+[debug] [2017-09-13T17:31:03.314Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-13T17:31:03.336Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-13T17:31:03.336Z] > authorizing via signed-in user
+[debug] [2017-09-13T17:31:03.339Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/what-the-blush  
+ Wed Sep 13 2017 11:31:03 GMT-0600 (MDT)
+[debug] [2017-09-13T17:31:03.699Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-13T17:31:03.701Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/what-the-blush/tokens  
+ Wed Sep 13 2017 11:31:03 GMT-0600 (MDT)
+[debug] [2017-09-13T17:31:04.051Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/roxannnlopez/Documents/makeupProject'...
+[info] 
+[debug] [2017-09-13T17:31:04.055Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/what-the-blush  
+ Wed Sep 13 2017 11:31:04 GMT-0600 (MDT)
+[debug] [2017-09-13T17:31:04.313Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-13T17:31:04.314Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/659336783820/clients/_:getWebAppConfig  
+ Wed Sep 13 2017 11:31:04 GMT-0600 (MDT)
+[debug] [2017-09-13T17:31:04.560Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: Y
+[info] ✔  hosting: Local server: http://localhost:5000
+
