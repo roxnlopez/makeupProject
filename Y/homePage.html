@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>My Makeup Page</title>
 	<link rel="stylesheet" href="homePage.css">
 </head>
 <body>
 	<h1>Welcome Home Doll</h1>
+	<h3>Save all your makeup wishes here</h3>
+	<hr />
+	<input type="text" id="makeupName" placeholder="Enter makeup item here" onkeypress="return saveToList(event)" />
+	<h4>My Makeup Wishlist</h4>
+	<ol id="wishMakeup">
+	</ol>
+	<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+    <script type="text/javascript" src="app.js"></script>
 </body>
 </html>

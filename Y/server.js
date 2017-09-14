@@ -1,3 +1,4 @@
+//back server side
 var firebase = require('firebase').initializeApp({
   	serviceAccount: "path/to/serviceAccountKey.json",
   	databaseURL: "https://what-the-blush.firebaseio.com/"

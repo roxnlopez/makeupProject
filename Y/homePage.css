@@ -1,15 +1,23 @@
+/* body styles */
 body {
 	background-color: #000000;
 	color: #CFB53B;
 	text-align: center;
 	font-style: italic;
+	font-family: "calibri";
+	padding: 32px;
+	padding-top: 16px;
 }
 
-@-webkit-keyframes STAR-MOVE {
-	from {
-		background-position: 5% 5%
-	}
-	to { 
-		background-position: 1300% 600%
-	}
+/* heading styles */
+h1, h3 {
+	text-align: center;
+	color: #CFB53B;
+}
+
+/* id styles */
+#wishMakeup {
+	width: 98%;
+	padding: 9px;
+	font-size: 16px;
 }
