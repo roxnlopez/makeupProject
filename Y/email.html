@@ -133,6 +133,7 @@ limitations under the License.
           // document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
           if (!emailVerified) {
             document.getElementById('quickstart-verify-email').disabled = false;
+            window.location = 'homePage.html';
           }
         } else {
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';

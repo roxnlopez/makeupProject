@@ -1,5 +1,31 @@
-//   var database = firebase.database();
+var firebase = require('firebase').initializeApp({
+  	serviceAccount: "path/to/serviceAccountKey.json",
+  	databaseURL: "https://what-the-blush.firebaseio.com/"
+});
 
+var wantList = {text: 'hey guys', timestamp: new Date().toString()};
+var ref = firebase.database().ref().child('what-the-blush');
+var logsRef = ref.child('logs');
+var wantListsRef = ref.child('wantList');
+var wantListRef = wantListsRef.push(wantList);
+
+logsRef.child(wantListRef.key).set(wantList);
+
+logsRef.orderByKey().limitToLast(1).on('child_added', function(snap) {
+	console.log('added', snap.val());
+});
+
+logsRef.on('child_removed', function(snap) {
+	console.log('removed', snap.val());
+});
+
+logsRef.on('child_changed', function(snap) {
+	console.log('changed', snap.val());
+});
+
+logsRef.on('value', function(snap) {
+	console.log('value', snap.val());
+});
 //   //basic write operation
 //   function writeUserData(userId, name, email, imageUrl) {
 //   firebase.database().ref('users/' + userId).set({

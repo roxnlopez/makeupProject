@@ -1,0 +1,15 @@
+body {
+	background-color: #000000;
+	color: #CFB53B;
+	text-align: center;
+	font-style: italic;
+}
+
+@-webkit-keyframes STAR-MOVE {
+	from {
+		background-position: 5% 5%
+	}
+	to { 
+		background-position: 1300% 600%
+	}
+}
