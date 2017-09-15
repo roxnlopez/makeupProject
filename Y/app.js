@@ -58,7 +58,7 @@ function del(key, muName) {
 }
 
 function buildEndPoint (key) {
-	return new Firebase('https://what-the-blush.firebaseio.com/' + key + 'https://makeup-api.herokuapp.com/api/v1/products.json?brand');
+	return new Firebase('https://what-the-blush.firebaseio.com/' + key);
 }
 
 //this will get fired on initial load as well as when there is a change in the data

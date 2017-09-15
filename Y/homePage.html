@@ -7,31 +7,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 </head>
-<body>
-	<script src="/__/firebase/4.0.0/firebase-app.js"></script>
-  	<script src="/__/firebase/4.0.0/firebase-auth.js"></script>
-  	<script src="/__/firebase/init.js"></script>
-	<script>
-		function initApp() {
-	      	firebase.auth().onAuthStateChanged(function(user) {
-		        if (user) {
-		          var emailVerified = user.emailVerified;
-		          var providerData = user.providerData;
-		          document.getElementById('quickstart-sign-out').textContent = 'Sign out';
-		          // document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-		          if (!emailVerified) {
-		            document.getElementById('quickstart-verify-email').disabled = false;
-		            window.location = 'index.html';
-		          }
-		        } else {
-		          document.getElementById('quickstart-sign-out-status').textContent = 'Signed out';
-		          document.getElementById('quickstart-account-details').textContent = 'true';
-		        }
-	      });
-    	}
-	</script>
-	<button enabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-out" name="signout">Sign Out</button>
-        
+<body>        
 	<h1>Welcome Home Doll</h1>
 	<h3>Save all your makeup wishes here</h3>
 	<hr />

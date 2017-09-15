@@ -1,64 +1,28 @@
-[debug] [2017-09-15T15:38:06.966Z] ----------------------------------------------------------------------
-[debug] [2017-09-15T15:38:06.970Z] Command:       /usr/local/Cellar/node/8.1.2/bin/node /usr/local/bin/firebase serve
-[debug] [2017-09-15T15:38:06.971Z] CLI Version:   3.10.1
-[debug] [2017-09-15T15:38:06.971Z] Platform:      darwin
-[debug] [2017-09-15T15:38:06.971Z] Node Version:  v8.1.2
-[debug] [2017-09-15T15:38:06.971Z] Time:          Fri Sep 15 2017 09:38:06 GMT-0600 (MDT)
-[debug] [2017-09-15T15:38:06.972Z] ----------------------------------------------------------------------
+[debug] [2017-09-15T20:22:07.854Z] ----------------------------------------------------------------------
+[debug] [2017-09-15T20:22:07.859Z] Command:       /usr/local/Cellar/node/8.1.2/bin/node /usr/local/bin/firebase serve
+[debug] [2017-09-15T20:22:07.860Z] CLI Version:   3.10.1
+[debug] [2017-09-15T20:22:07.860Z] Platform:      darwin
+[debug] [2017-09-15T20:22:07.860Z] Node Version:  v8.1.2
+[debug] [2017-09-15T20:22:07.861Z] Time:          Fri Sep 15 2017 14:22:07 GMT-0600 (MDT)
+[debug] [2017-09-15T20:22:07.861Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2017-09-15T15:38:07.034Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2017-09-15T15:38:07.034Z] > authorizing via signed-in user
-[debug] [2017-09-15T15:38:07.038Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/what-the-blush  
- Fri Sep 15 2017 09:38:07 GMT-0600 (MDT)
-[debug] [2017-09-15T15:38:07.487Z] <<< HTTP RESPONSE 200
-[debug] [2017-09-15T15:38:07.488Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/what-the-blush/tokens  
- Fri Sep 15 2017 09:38:07 GMT-0600 (MDT)
-[debug] [2017-09-15T15:38:07.886Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-15T20:22:07.942Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-15T20:22:07.942Z] > authorizing via signed-in user
+[debug] [2017-09-15T20:22:07.945Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/what-the-blush  
+ Fri Sep 15 2017 14:22:07 GMT-0600 (MDT)
+[debug] [2017-09-15T20:22:08.414Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-15T20:22:08.415Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/what-the-blush/tokens  
+ Fri Sep 15 2017 14:22:08 GMT-0600 (MDT)
+[debug] [2017-09-15T20:22:08.753Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/roxannnlopez/Documents/makeupProject'...
 [info] 
-[debug] [2017-09-15T15:38:07.891Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/what-the-blush  
- Fri Sep 15 2017 09:38:07 GMT-0600 (MDT)
-[debug] [2017-09-15T15:38:08.169Z] <<< HTTP RESPONSE 200
-[debug] [2017-09-15T15:38:08.169Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/659336783820/clients/_:getWebAppConfig  
- Fri Sep 15 2017 09:38:08 GMT-0600 (MDT)
-[debug] [2017-09-15T15:38:08.713Z] <<< HTTP RESPONSE 200
-[info] i  hosting: Serving hosting files from: Y
-[info] ✔  hosting: Local server: http://localhost:5000
-
-[debug] [2017-09-15T17:53:52.116Z] ----------------------------------------------------------------------
-[debug] [2017-09-15T17:53:52.121Z] Command:       /usr/local/Cellar/node/8.1.2/bin/node /usr/local/bin/firebase serve
-[debug] [2017-09-15T17:53:52.121Z] CLI Version:   3.10.1
-[debug] [2017-09-15T17:53:52.121Z] Platform:      darwin
-[debug] [2017-09-15T17:53:52.121Z] Node Version:  v8.1.2
-[debug] [2017-09-15T17:53:52.122Z] Time:          Fri Sep 15 2017 11:53:52 GMT-0600 (MDT)
-[debug] [2017-09-15T17:53:52.122Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2017-09-15T17:53:52.291Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2017-09-15T17:53:52.291Z] > authorizing via signed-in user
-[debug] [2017-09-15T17:53:52.295Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2017-09-15T17:53:52.295Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/9r7A9FS0hgooUnXIz93GiJDVK_wIYe1YMjpnQlOwfdY',
-  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
-  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
-  grant_type: 'refresh_token',
-  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Fri Sep 15 2017 11:53:52 GMT-0600 (MDT)
-[debug] [2017-09-15T17:53:52.742Z] <<< HTTP RESPONSE 200
-[debug] [2017-09-15T17:53:52.782Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/what-the-blush  
- Fri Sep 15 2017 11:53:52 GMT-0600 (MDT)
-[debug] [2017-09-15T17:53:53.174Z] <<< HTTP RESPONSE 200
-[debug] [2017-09-15T17:53:53.175Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/what-the-blush/tokens  
- Fri Sep 15 2017 11:53:53 GMT-0600 (MDT)
-[debug] [2017-09-15T17:53:54.606Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from '/Users/roxannnlopez/Documents/makeupProject'...
-[info] 
-[debug] [2017-09-15T17:53:54.610Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/what-the-blush  
- Fri Sep 15 2017 11:53:54 GMT-0600 (MDT)
-[debug] [2017-09-15T17:53:54.886Z] <<< HTTP RESPONSE 200
-[debug] [2017-09-15T17:53:54.887Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/659336783820/clients/_:getWebAppConfig  
- Fri Sep 15 2017 11:53:54 GMT-0600 (MDT)
-[debug] [2017-09-15T17:53:55.211Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-15T20:22:08.757Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/what-the-blush  
+ Fri Sep 15 2017 14:22:08 GMT-0600 (MDT)
+[debug] [2017-09-15T20:22:09.090Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-15T20:22:09.091Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/659336783820/clients/_:getWebAppConfig  
+ Fri Sep 15 2017 14:22:09 GMT-0600 (MDT)
+[debug] [2017-09-15T20:22:09.524Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: Y
 [info] ✔  hosting: Local server: http://localhost:5000
 
