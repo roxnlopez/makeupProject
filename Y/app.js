@@ -1,5 +1,5 @@
 //client front side
-var wishMakeup = new Firebase('https://what-the-blush.firebaseio.com/makeup');
+var wishMakeup = new Firebase('https://what-the-blush.firebaseio.com/');
 
 function saveToList(event) {
 	//when user hits enter, will attempt to save data
@@ -31,8 +31,8 @@ function refreshUI(list) {
 function genLinks(key, muName) {
 	var links = '';
 	links += '<a href="javascript:edit(\'' + key + '\',\'' + muName + '\')">Edit</a> | ';
-  links += '<a href="javascript:del(\'' + key + '\',\'' + muName + '\')">Delete</a>';
-  return links;
+  	links += '<a href="javascript:del(\'' + key + '\',\'' + muName + '\')">Delete</a>';
+  	return links;
 }
 
 //edit 
@@ -58,7 +58,7 @@ function del(key, muName) {
 }
 
 function buildEndPoint (key) {
-	return new Firebase('https://what-the-blush.firebaseio.com/makeup/' + key);
+	return new Firebase('https://what-the-blush.firebaseio.com/' + key + 'https://makeup-api.herokuapp.com/api/v1/products.json?brand');
 }
 
 //this will get fired on initial load as well as when there is a change in the data
