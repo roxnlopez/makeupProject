@@ -31,7 +31,8 @@ function refreshUI(list) {
 function genLinks(key, muName) {
 	var links = '';
 	links += '<a href="javascript:edit(\'' + key + '\',\'' + muName + '\')">Edit</a> | ';
-  	links += '<a href="javascript:del(\'' + key + '\',\'' + muName + '\')">Delete</a>';
+  	links += '<a href="javascript:del(\'' + key + '\',\'' + muName + '\')">Delete</a> | ';
+  	links += '<a href="javascript:love(\'' + key + '\',\'' + muName + '\')">Love</a>';
   	return links;
 }
 
@@ -54,6 +55,15 @@ function del(key, muName) {
 		//build FB endpoint to item in makeup collection
 		var deleteMakeupRef = buildEndPoint(key);
 		deleteMakeupRef.remove();
+	}
+}
+
+//love
+function love(key, muName) {
+	if(response === true) {
+		//build FB endpoint to item in makeup collection
+		var loveMakeupRef = buildEndPoint(key);
+		loveMakeupRef.update();
 	}
 }
 
