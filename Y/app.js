@@ -32,7 +32,7 @@ function genLinks(key, muName) {
 	var links = '';
 	links += '<a href="javascript:edit(\'' + key + '\',\'' + muName + '\')">Edit</a> | ';
   	links += '<a href="javascript:del(\'' + key + '\',\'' + muName + '\')">Delete</a> | ';
-  	links += '<a href="javascript:love(\'' + key + '\',\'' + muName + '\')">Love</a>';
+  	links += '<a href="javascript:love">&#x2764</a>';
   	return links;
 }
 
@@ -65,6 +65,9 @@ function del(key, muName) {
 // 		love.save();
 // 	}
 // }
+
+
+
 
 function buildEndPoint (key) {
 	return new Firebase('https://what-the-blush.firebaseio.com/' + key);
