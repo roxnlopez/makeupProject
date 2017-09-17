@@ -59,13 +59,12 @@ function del(key, muName) {
 }
 
 //love
-function love(key, muName) {
-	if(response === true) {
-		//build FB endpoint to item in makeup collection
-		var loveMakeupRef = buildEndPoint(key);
-		loveMakeupRef.update();
-	}
-}
+// function love(key, muName) {
+// 	if(onclick === true) {
+// 		//build FB endpoint to item in makeup collection
+// 		love.save();
+// 	}
+// }
 
 function buildEndPoint (key) {
 	return new Firebase('https://what-the-blush.firebaseio.com/' + key);
