@@ -25,21 +25,10 @@
       messagingSenderId: "659336783820"
     };
 
-    var secondaryAppConfig = {
-    authDomain: "what-the-blush.firebaseapp.com",
-    databaseURL: "https://makeup-api.herokuapp.com/api/v1/products.json/",
-    storageBucket: "what-the-blush.appspot.com",
-    };
-    
-    var secondary = firebase.initializeApp(secondaryAppConfig, "secondary");
-    var secondaryDatabase = secondary.database();
-    // Use the shorthand notation to retrieve the default app's services
-    var defaultStorage = firebase.storage();
-    var defaultDatabase = firebase.database();
+    // // Use the shorthand notation to retrieve the default app's services
+    // var defaultStorage = firebase.storage();
+    // var defaultDatabase = firebase.database();
 
-    // Use the otherApp variable to retrieve the other app's services
-    var otherStorage = secondary.storage();
-    var otherDatabase = secondary.database();
     firebase.initializeApp(config);
       </script>
 <script type="app.js"></script>

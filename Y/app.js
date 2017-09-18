@@ -20,22 +20,6 @@ function saveToFB(makeupName) {
 	});
 }
 
-$.ajax ({
-	method: 'GET',
-	url: 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=&product_type=',
-	data: JSON.stringify({
-			url: 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=&product_type='
-			}),
-	contentType: "application/json",
-	success: console.log('success')
-});
-document.getElementById("makeupName").addEventListener("click", myFunction);
-
-function myFunction() {
-	var url = 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=&product_type=';
-    document.getElementById("makeupName").innerHTML = JSON.stringify(url);
-}
-
 function refreshUI(list) {
 	var lis = '';
 	for (var i = 0; i < list.length; i++) {
