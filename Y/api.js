@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     $.ajax ({
 	method: 'GET',
-	url: 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=&product_type=',
+	url: 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=&product_type=',
 	dataType: "json",
 	success: myFunction
 	});
