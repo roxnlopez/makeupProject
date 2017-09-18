@@ -24,6 +24,6 @@ $(document).ready(function() {
 });
 
 function myFunction(data) {
-	var charCode = data.enter;
+	
     console.log(data[0]);
 }

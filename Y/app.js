@@ -60,8 +60,8 @@ function del(key, muName) {
 
 //love favorites
 function love(key, muName) {
-	// var loveMakeupRef = buildEndPoint(key);
-	// loveMakeupRef.update();
+	// var num = 'javascript:love(\'';
+	// muName.push("javascript:love('" + key + "','" + muName + "')");
 }
 
 function buildEndPoint (key) {
