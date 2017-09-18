@@ -32,7 +32,7 @@ function genLinks(key, muName) {
 	var links = '';
 	links += '<a href="javascript:edit(\'' + key + '\',\'' + muName + '\')">Edit</a> | ';
   	links += '<a href="javascript:del(\'' + key + '\',\'' + muName + '\')">Delete</a> | ';
-  	links += '<a href="javascript:love">&#x2764</a>';
+  	links += '<a href="javascript:love(\'' + key + '\',\'' + muName + '\')">&#x2764</a>';
   	return links;
 }
 
@@ -58,15 +58,18 @@ function del(key, muName) {
 	}
 }
 
-//love
-// function love(key, muName) {
-// 	if(onclick === true) {
-// 		//build FB endpoint to item in makeup collection
-// 		love.save();
-// 	}
-// }
-
-
+//love favorites
+function love(key, muName) {
+	console.log("running");
+	$('select[name="love"]').change(function() { 
+	    $('#submit').trigger('click');
+	});
+	console.log(love);
+	$('#submit').click(function() {
+	    alert('Favorited!');
+	});
+	console.log(love);
+}
 
 
 function buildEndPoint (key) {
