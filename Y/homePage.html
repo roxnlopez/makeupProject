@@ -2,25 +2,24 @@
 <html>
 <head>
 	<title>My Makeup Page</title>
-	<link rel="stylesheet" href="homePage.css">
-	<link rel="stylesheet" href="heart.css">
-	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
+  	<!-- <link rel="stylesheet" href="heart.css"> -->
+  	<link rel="stylesheet" href="./homePage.css">
+  	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 </head>
 <body>        
-	<h1>Welcome Home Doll</h1>
+	<h1 style="font-size: 4em">Welcome Home Doll</h1>
 	<h3>Save all your makeup wishes here</h3>
 	<hr />
 	<input type="text" id="makeupName" placeholder="Enter makeup item here" onkeypress="return saveToList(event)" />
 	<h4>My Makeup Wishlist</h4>
 	<ol id="wishMakeup">
 	</ol>
-	<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
 	<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+		<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
     <script type="text/javascript" src="app.js"></script>
 </body>
 </html>

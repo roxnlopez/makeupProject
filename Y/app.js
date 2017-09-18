@@ -20,6 +20,22 @@ function saveToFB(makeupName) {
 	});
 }
 
+$.ajax ({
+	method: 'GET',
+	url: 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=&product_type=',
+	data: JSON.stringify({
+			url: 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=&product_type='
+			}),
+	contentType: "application/json",
+	success: console.log('success')
+});
+document.getElementById("makeupName").addEventListener("click", myFunction);
+
+function myFunction() {
+	var url = 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=&product_type=';
+    document.getElementById("makeupName").innerHTML = JSON.stringify(url);
+}
+
 function refreshUI(list) {
 	var lis = '';
 	for (var i = 0; i < list.length; i++) {
@@ -60,20 +76,12 @@ function del(key, muName) {
 
 //love favorites
 function love(key, muName) {
-	console.log("running");
-	$('select[name="love"]').change(function() { 
-	    $('#submit').trigger('click');
-	});
-	console.log(love);
-	$('#submit').click(function() {
-	    alert('Favorited!');
-	});
-	console.log(love);
+	// var loveMakeupRef = buildEndPoint(key);
+	// loveMakeupRef.update();
 }
 
-
 function buildEndPoint (key) {
-	return new Firebase('https://what-the-blush.firebaseio.com/' + key);
+	return new Firebase('https://what-the-blush.firebaseio.com/'+ key);
 }
 
 //this will get fired on initial load as well as when there is a change in the data

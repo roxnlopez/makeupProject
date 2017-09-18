@@ -2,9 +2,11 @@
 <head>
   <meta charset="utf-8">
   <title>MakeupProject</title>
+  <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <h1>WELCOME!</h1>
+  <h1 style="letter-spacing: 7px">WHAT THE BLUSH?!</h1>
 
   <a href="email.html">Login Here</a>
 
@@ -22,8 +24,24 @@
       storageBucket: "what-the-blush.appspot.com",
       messagingSenderId: "659336783820"
     };
-   firebase.initializeApp(config);
-  </script>
+
+    var secondaryAppConfig = {
+    authDomain: "what-the-blush.firebaseapp.com",
+    databaseURL: "https://makeup-api.herokuapp.com/api/v1/products.json/",
+    storageBucket: "what-the-blush.appspot.com",
+    };
+    
+    var secondary = firebase.initializeApp(secondaryAppConfig, "secondary");
+    var secondaryDatabase = secondary.database();
+    // Use the shorthand notation to retrieve the default app's services
+    var defaultStorage = firebase.storage();
+    var defaultDatabase = firebase.database();
+
+    // Use the otherApp variable to retrieve the other app's services
+    var otherStorage = secondary.storage();
+    var otherDatabase = secondary.database();
+    firebase.initializeApp(config);
+      </script>
 <script type="app.js"></script>
 </body>
 </html>
