@@ -12,7 +12,7 @@ TRELLO BOARD: <a href="https://trello.com/b/zbAR4Cho/project-4">Here</a>
 
 -------------
 
-**TECHNOLOGIES USED** 
+**TECHNOLOGIES USED** <br>	
 I used Firebase as an API on this project, along with vanilla javascript. I also plan to pull in an external API.
 
 -----------
