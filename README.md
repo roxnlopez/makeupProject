@@ -1,10 +1,10 @@
 **WHAT THE BLUSH!**
 -----------
-FIREBASE LINK: <a href="https://what-the-blush.firebaseapp.com/">What-The-Blush!</a>
+Firebase Link: <a href="https://what-the-blush.firebaseapp.com/">What-The-Blush!</a>
 
 -----------
 
-TRELLO BOARD: <a href="https://trello.com/b/zbAR4Cho/project-4">Here</a>
+Trello Board: <a href="https://trello.com/b/zbAR4Cho/project-4">Here</a>
 
 ----------
 
