@@ -11,19 +11,9 @@
 	<h1 style="font-size: 4em">Welcome Home Doll</h1>
 	<h3>Save all your makeup wishes here</h3>
 	<hr />
-		<!-- <form>
-		    <input type="text" id="makeupName" placeholder="Enter makeup item here" onkeypress="return saveToList(event)" />
-		    <input id="hit" type="submit" value="Submit" />
-		</form>
-		<script>
-		    document.getElementById('makeupName').addEventListener('onkeypress', function(event) {
-		        if (event.keyCode == 13) {
-		            event.preventDefault();
-		        }
-			});
-		</script> -->
-	<input type="text" id="makeupName" placeholder="Enter makeup item here" onkeypress="return saveToList(event)" />
-	<button id="hit">Submit</button>
+
+	<input type="text" id="makeupName" placeholder="Enter makeup item here" />
+	<button id="hit">Submit</button> <p id="here"></p>
 	<h4>My Makeup Wishlist</h4>
 	<ol id="wishMakeup">
 	</ol>
@@ -33,6 +23,6 @@
 	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	  crossorigin="anonymous"></script>
     <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="api.js"></script>
+    <!-- <script type="text/javascript" src="api.js"></script> -->
 </body>
 </html>
