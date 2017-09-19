@@ -16,7 +16,7 @@ var result;
 function myFunction() {
     var brands = document.getElementById("makeupName").innerHTML;
     console.log(brands);
-    var url = 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=' + brands + '';
+    var url = 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=' + brands + '';
     $.ajax ({
         method: 'GET',
         url: url,
