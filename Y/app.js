@@ -31,27 +31,33 @@ function myFunction() {
 
  function saveToList(event) {
     //when user hits enter, will attempt to save data
-    
+
         var makeupName = document.getElementById('makeupName').value.trim();
         if(makeupName.length > 0) {
-            saveToFB(makeupName);
+            saveToFB(makeupName, result);
+            // console.log(result);
         }
         document.getElementById('makeupName').value = '';
         return false;
 }
 
 //save data to Firebase
-function saveToFB(makeupName) {
+function saveToFB(makeupName, result) {
+	// console.log(result);
 	wishMakeup.push({
 		name: makeupName,
 		returnedBrand: result
 	});
+	// console.log(result);
 }
 
 function refreshUI(list) {
 	var lis = '';
+	console.log(list);
 	for (var i = 0; i < list.length; i++) {
-		lis += '<li data-key="' + list[i].key + '">' + list[i].name + list[i].returnedBrand + ' [' + genLinks(list[i].key, list[i].name, list[i].returnedBrand) + ']</li>';
+		// console.log(result);
+		lis += '<li data-key="' + list[i].key + '">' + list[i].name + ' ' + list[i].returnedBrand + ' [' + genLinks(list[i].key, list[i].name, list[i].returnedBrand) + ']</li>';
+		// console.log(result);
 	}
 	document.getElementById('wishMakeup').innerHTML = lis;
 }
@@ -104,10 +110,12 @@ wishMakeup.on("value", function(snapshot) {
 	for (var key in data) {
 		if(data.hasOwnProperty(key)) {
 			name = data[key].name ? data[key].name : '';
+			returnedBrand = data[key].returnedBrand ? data[key].returnedBrand : '';
 			if(name.trim().length > 0) {
 				list.push({
 					name: name,
-					key: key
+					key: key,
+					returnedBrand: result
 				});
 			}
 		}
