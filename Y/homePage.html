@@ -11,16 +11,28 @@
 	<h1 style="font-size: 4em">Welcome Home Doll</h1>
 	<h3>Save all your makeup wishes here</h3>
 	<hr />
+		<!-- <form>
+		    <input type="text" id="makeupName" placeholder="Enter makeup item here" onkeypress="return saveToList(event)" />
+		    <input id="hit" type="submit" value="Submit" />
+		</form>
+		<script>
+		    document.getElementById('makeupName').addEventListener('onkeypress', function(event) {
+		        if (event.keyCode == 13) {
+		            event.preventDefault();
+		        }
+			});
+		</script> -->
 	<input type="text" id="makeupName" placeholder="Enter makeup item here" onkeypress="return saveToList(event)" />
+	<button id="hit">Submit</button>
 	<h4>My Makeup Wishlist</h4>
 	<ol id="wishMakeup">
 	</ol>
 	<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
-		<script
+	<script
 	  src="https://code.jquery.com/jquery-3.2.1.min.js"
 	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	  crossorigin="anonymous"></script>
     <script type="text/javascript" src="app.js"></script>
-    <script src="api.js"></script>
+    <script type="text/javascript" src="api.js"></script>
 </body>
 </html>

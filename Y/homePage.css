@@ -21,6 +21,18 @@ h1, h3 {
 	font-size: 1.7em;
 }
 
+#makeupName {
+	color: #CFB53B;
+	font-family: 'Montez', cursive; 
+	font-size: 17px;
+}
+
+#hit {
+	color: #CFB53B;
+	font-family: 'Montez', cursive; 
+	font-size: 17px;
+}
+
 /* links */
 a {
 	color: darkslategray;

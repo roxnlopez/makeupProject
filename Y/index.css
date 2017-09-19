@@ -11,3 +11,9 @@ h1, h3 {
 	font-size: 5em;
 	padding-top: 10px;
 }
+
+#login{
+	color: #CFB53B;
+	font-family: 'Montez', cursive; 
+	font-size: 23px;
+	}	

@@ -26,3 +26,31 @@
 [info] i  hosting: Serving hosting files from: Y
 [info] ✔  hosting: Local server: http://localhost:5000
 
+[debug] [2017-09-19T01:31:00.293Z] ----------------------------------------------------------------------
+[debug] [2017-09-19T01:31:00.299Z] Command:       /usr/local/Cellar/node/8.1.2/bin/node /usr/local/bin/firebase serve
+[debug] [2017-09-19T01:31:00.299Z] CLI Version:   3.10.1
+[debug] [2017-09-19T01:31:00.299Z] Platform:      darwin
+[debug] [2017-09-19T01:31:00.299Z] Node Version:  v8.1.2
+[debug] [2017-09-19T01:31:00.300Z] Time:          Mon Sep 18 2017 19:31:00 GMT-0600 (MDT)
+[debug] [2017-09-19T01:31:00.300Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-19T01:31:00.442Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-19T01:31:00.442Z] > authorizing via signed-in user
+[debug] [2017-09-19T01:31:00.448Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/what-the-blush  
+ Mon Sep 18 2017 19:31:00 GMT-0600 (MDT)
+[debug] [2017-09-19T01:31:00.878Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-19T01:31:00.880Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/what-the-blush/tokens  
+ Mon Sep 18 2017 19:31:00 GMT-0600 (MDT)
+[debug] [2017-09-19T01:31:01.233Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/roxannnlopez/Documents/makeupProject'...
+[info] 
+[debug] [2017-09-19T01:31:01.239Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/what-the-blush  
+ Mon Sep 18 2017 19:31:01 GMT-0600 (MDT)
+[debug] [2017-09-19T01:31:01.475Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-19T01:31:01.476Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/659336783820/clients/_:getWebAppConfig  
+ Mon Sep 18 2017 19:31:01 GMT-0600 (MDT)
+[debug] [2017-09-19T01:31:01.815Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: Y
+[info] ✔  hosting: Local server: http://localhost:5000
+

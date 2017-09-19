@@ -14,16 +14,19 @@ $(document).ready(function() {
     // var otherStorage = secondary.storage();
     // var otherDatabase = secondary.database();
 
-    $.ajax ({
-	method: 'GET',
-	url: 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=&product_type=',
-	dataType: "json",
-	success: myFunction
-	});
 	document.getElementById("makeupName").addEventListener('keypress', myFunction, false);
 });
 
-function myFunction(data) {
-	
-    console.log(data[0]);
-}
+function myFunction() {
+    var brand = document.getElementById("makeupName").innerHTML;
+    var url = 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=' + brand;
+    $.ajax ({
+        method: 'GET',
+        url: url,
+        dataType: "json",
+        success: function(res) {
+            console.log('hello');
+            console.log(res); 
+        }
+    });
+ }   
