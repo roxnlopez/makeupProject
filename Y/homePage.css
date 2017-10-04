@@ -7,30 +7,35 @@ body {
 h1, h3 {
 	text-align: center;
 	color: #CFB53B;
-	font-family: 'Montez', cursive;
-	text-shadow: 4px 4px 4px #444;
+	font-family: 'Slabo 27px', serif;
 	font-size: 3em;
+}
+
+ol {
+	margin-left: 20px;
+	padding-left: 15em;
 }
 
 /* id styles */
 #wishMakeup {
-	width: 90%;
+	width: 40%;
 	color: #CFB53B;
-	font-family: 'Montez', cursive;
+	font-family: 'Slabo 27px', serif;
 	text-align: center;
-	font-size: 1.7em;
+	font-size: 1.5em;
 }
 
 #makeupName {
 	color: #CFB53B;
-	font-family: 'Montez', cursive; 
-	font-size: 17px;
+	font-family: 'Slabo 27px', serif; 
+	font-size: 1.3em;
+	width: 17%;
 }
 
 #hit {
 	color: #CFB53B;
-	font-family: 'Montez', cursive; 
-	font-size: 17px;
+	font-family: 'Slabo 27px', serif; 
+	font-size: 1.3em;
 }
 
 /* links */

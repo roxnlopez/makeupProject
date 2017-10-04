@@ -6,9 +6,9 @@ body {
 h1, h3 {
 	text-align: center;
 	color: #CFB53B;
-	font-family: 'Diplomata', cursive;
+	font-family: 'Playfair Display', serif;
 	font-size: 5em;
-	padding-top: 10px;
+	padding-top: 13px;
 }
 
 #login{
