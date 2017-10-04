@@ -66,7 +66,8 @@ function genLinks(key, muName) {
 	var links = '';
 	links += '<a href="javascript:edit(\'' + key + '\',\'' + muName + '\')">Edit</a> | ';
   	links += '<a href="javascript:del(\'' + key + '\',\'' + muName + '\')">Delete</a> | ';
-  	links += '<a href="javascript:love(\'' + key + '\',\'' + muName + '\')">&#x2764</a>';
+  	var a = document.querySelector(".heart");
+  	links += '<a href="javascript:a(\'' + key + '\',\'' + muName + '\')"></a>';
   	return links;
 }
 
@@ -92,11 +93,16 @@ function del(key, muName) {
 	}
 }
 
-//love favorites
-function love(key, muName) {
-	var loveMakeupRef = buildEndPoint(key);
-	loveMakeupRef.push("javascript:love('" + key + "','" + muName + "')");
-}
+//heart favorites
+/* when a user clicks, toggle the 'is-animating' class */
+$(".heart").on("click touchstart", function() {
+  $(this).toggleClass("is_animating");
+});
+/*when the animation is over, remove the class*/
+$(".heart").on("animationend", function() {
+  $(this).toggleClass("is_animating");
+});
+
 
 function buildEndPoint (key) {
 	return new Firebase('https://what-the-blush.firebaseio.com/'+ key);
