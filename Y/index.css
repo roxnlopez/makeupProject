@@ -6,8 +6,7 @@ body {
 h1, h3 {
 	text-align: center;
 	color: #CFB53B;
-	font-family: 'Montez', cursive;
-	text-shadow: 4px 4px 4px #444;
+	font-family: 'Diplomata', cursive;
 	font-size: 5em;
 	padding-top: 10px;
 }
@@ -15,5 +14,5 @@ h1, h3 {
 #login{
 	color: #CFB53B;
 	font-family: 'Montez', cursive; 
-	font-size: 23px;
+	font-size: 27px;
 	}	

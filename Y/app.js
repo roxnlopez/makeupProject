@@ -28,10 +28,9 @@ function myFunction() {
         }
     });
  }   
-
+//synthetic or cached database firebase
  function saveToList(event) {
     //when user hits enter, will attempt to save data
-
         var makeupName = document.getElementById('makeupName').value.trim();
         if(makeupName.length > 0) {
             saveToFB(makeupName, result);
