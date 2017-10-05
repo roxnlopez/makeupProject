@@ -1,3 +1,4 @@
+/* basic heart styles */
 .heart {
   cursor: pointer;
   height: 50px;
@@ -6,17 +7,20 @@
   background-position: left;
   background-repeat:no-repeat;
   background-size:2900%;
-}
-
-.heart:hover {
-  background-position:right;
-}
-
-.is_animating {
-  animation: heart-burst .8s steps(28) 1;
+  animation: heart-burst 1s infinity;
 }
 
 @keyframes heart-burst {
   from {background-position:left;}
   to { background-position:right;}
+}
+
+/* on click styles */
+.is_animating {
+  animation: heart-burst .8s steps(28) 1;
+}
+
+/* on hover styles */
+.heart:hover {
+  background-position:right;
 }

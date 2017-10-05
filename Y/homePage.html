@@ -14,10 +14,17 @@
 	<hr />
 
 	<input type="text" id="makeupName" placeholder="Enter makeup item here" />
-	<button id="hit">Submit</button> <p id="here"></p>
+	<button id="hit">Submit</button> 
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<br>
+				<a href="https://makeup-api.herokuapp.com/api/v1/products.json/" target="_top"></a>
+				<br>
+			</div>
+		</div>	
 	<h4>My Makeup Wishlist</h4>
 	<ol id="wishMakeup">
-		<div class="heart"></div>
 	</ol>
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.min.js"

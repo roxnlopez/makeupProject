@@ -22,8 +22,8 @@ function myFunction() {
         url: url,
         dataType: "json",
         success: function(data) {
-            console.log('hello!'+ JSON.stringify(data[0].brand));
-            result = JSON.stringify(data[0].brand);
+            console.log('hello!'+ JSON.stringify(data.brand));
+            result = JSON.stringify(data.brand);
             saveToList();
         }
     });
@@ -64,12 +64,32 @@ function refreshUI(list) {
 
 function genLinks(key, muName) {
 	var links = '';
-	links += '<a href="javascript:edit(\'' + key + '\',\'' + muName + '\')">Edit</a> | ';
-  	links += '<a href="javascript:del(\'' + key + '\',\'' + muName + '\')">Delete</a> | ';
-  	var a = document.querySelector(".heart");
-  	links += '<a href="javascript:a(\'' + key + '\',\'' + muName + '\')"></a>';
+	links += '<a href="javascript:edit(\'' + key + '\',\'' + muName + '\')">&nbsp; Edit &nbsp;</a> | ';
+  	links += '<a href="javascript:del(\'' + key + '\',\'' + muName + '\')">&nbsp; Delete &nbsp;</a> | ';
+  	// links += '<a href="javascript:a(\'' + key + '\',\'' + muName + '\')">' + heart + '</a>';
+  	links += '<span class="heart">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>';
   	return links;
 }
+
+//modal
+console.log("Tuesday");
+var modal = document.getElementById('myModal');
+var btn = document.getElementById('hit');
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+	modal.style.display = "block";
+};
+
+span.onclick = function() {
+	modal.style.display = "none";
+};
+// console.log("Wednesday");
+window.onclick = function(event) {
+	if(event.target == modal) {
+		modal.style.display = "none";
+	}
+};
 
 //edit 
 function edit(key, muName) {
@@ -95,12 +115,12 @@ function del(key, muName) {
 
 //heart favorites
 /* when a user clicks, toggle the 'is-animating' class */
-$(".heart").on("click touchstart", function() {
-  $(this).toggleClass("is_animating");
+$(".heart").on('click', function() {
+  $(this).toggleClass('is_animating');
 });
-/*when the animation is over, remove the class*/
-$(".heart").on("animationend", function() {
-  $(this).toggleClass("is_animating");
+// when the animation is over, remove the class
+$(".heart").on('animationend', function() {
+  $(this).toggleClass('is_animating');
 });
 
 
