@@ -22,8 +22,8 @@ function myFunction() {
         url: url,
         dataType: "json",
         success: function(data) {
-            console.log('hello!'+ JSON.stringify(data.brand));
-            result = JSON.stringify(data.brand);
+            console.log('hello!'+ JSON.stringify(data[0][1].brand));
+            result = JSON.stringify(data[0][1].brand;
             saveToList();
         }
     });
