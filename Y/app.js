@@ -22,8 +22,8 @@ function myFunction() {
         url: url,
         dataType: "json",
         success: function(data) {
-            console.log('hello!'+ JSON.stringify(data[0][1].brand));
-            result = JSON.stringify(data[0][1].brand;
+            console.log('hello!'+ JSON.stringify(data[1].brand));
+            result = JSON.stringify(data[1].brand);
             saveToList();
         }
     });
@@ -73,23 +73,23 @@ function genLinks(key, muName) {
 
 //modal
 console.log("Tuesday");
-var modal = document.getElementById('myModal');
-var btn = document.getElementById('hit');
-var span = document.getElementsByClassName("close")[0];
+// var modal = document.getElementById('myModal');
+// var btn = document.getElementById('hit');
+// var span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
-	modal.style.display = "block";
-};
+// btn.onclick = function() {
+// 	modal.style.display = "block";
+// };
 
-span.onclick = function() {
-	modal.style.display = "none";
-};
+// span.onclick = function() {
+// 	modal.style.display = "none";
+// };
 // console.log("Wednesday");
-window.onclick = function(event) {
-	if(event.target == modal) {
-		modal.style.display = "none";
-	}
-};
+// window.onclick = function(event) {
+// 	if(event.target == modal) {
+// 		modal.style.display = "none";
+// 	}
+// };
 
 //edit 
 function edit(key, muName) {
