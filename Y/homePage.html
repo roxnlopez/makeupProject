@@ -4,33 +4,55 @@
 	<title>My Makeup Page</title>
   	<link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
   	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
   	<link rel="stylesheet" href="heart.css">
   	<link rel="stylesheet" href="./homePage.css">
-  	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 </head>
 <body>
 	<h1 style="font-size: 4em">Welcome Home Doll!</h1>
 	<h3>Save all your makeup wishes here:</h3>
-	<hr />
 
-	<input type="text" id="productType" placeholder="Enter makeup item here" />
-	<button id="hit">Submit</button>
-		<!-- <div id="myModal" class="modal">
-			<div class="modal-content">
-				<span class="close">&times;
-					<a href="https://makeup-api.herokuapp.com/api/v1/products.json?brand="></a>
-				</span>
+	<form id="productTypeForm">
+		<div class="ui action input">
+			<input type="text" id="productType" placeholder="Makeup item" />
+			<button class="ui button grey" id="hit" type="submit">Submit</button>
+		</div>
+	</form>
+
+	<div class="ui modal" id="productListModal">
+	  <i class="close icon"></i>
+	  <div class="header">
+	    Select Your Brand for <span id="productTypeLabel"></span>
+	  </div>
+	  <div class="content">
+	  	<div id="productList" class="ui list">
+	  	</div>
+	  </div>
+	  <div class="actions">
+	    <div class="ui black deny button">
+	      Cancel
+	    </div>
+	  </div>
+	</div>
+
+	<div class="ui container">
+		<h4>My Makeup Wishlist</h4>
+		<div class="ui centered grid">
+			<div class="ten wide column">
+				<div class="ui list" id="wishMakeup">
+					
+				</div>
 			</div>
-		</div>	 -->
-	<h4>My Makeup Wishlist</h4>
-	<ol id="wishMakeup">
-	</ol>
+		</div>
+	</div>
+
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.min.js"
 	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	  crossorigin="anonymous"></script>
 	<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <!-- <script type="text/javascript" src="api.js"></script> -->
 </body>
