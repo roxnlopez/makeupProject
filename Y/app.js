@@ -12,47 +12,45 @@ $(document).ready(function() {
 });
 document.getElementById("hit").addEventListener('click', myFunction, false);
 
-var result;
-function myFunction() {
-    var brands = document.getElementById("makeupName").innerHTML;
+//var result; // DONT USE GLOBAL VARIABLES
+function retrieveBrands() { //myFunction() { // BETTER FUNCTION NAMES
+    var productType = document.getElementById("productType").value.trim();
     console.log(brands);
-    var url = 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=' + brands + '';
+    var url = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=' + productType;
     $.ajax ({
         method: 'GET',
         url: url,
         dataType: "json",
         success: function(data) {
             console.log('hello!'+ JSON.stringify(data[1].brand));
-            result = JSON.stringify(data[1].brand);
-            saveToList();
+            var brand = JSON.stringify(data[1].brand);
+            saveToList(productType, brand);
         }
     });
- }   
+ }
 //synthetic or cached database firebase
- function saveToList(event) {
+function saveToList(productType, brand) { // Pass brand into saveToList, don't use global vars
     //when user hits enter, will attempt to save data
-        var makeupName = document.getElementById('makeupName').value.trim();
-        if(makeupName.length > 0) {
-            saveToFB(makeupName, result);
+        if(productType.length > 0) {
+            saveToFB(productType, brand);
             // console.log(result);
         }
-        document.getElementById('makeupName').value = '';
+        document.getElementById('productType').value = '';
         return false;
 }
 
 //save data to Firebase
-function saveToFB(makeupName, result) {
-	// console.log(result);
+function saveToFB(productType, brand) {
+	// console.log(brand);
 	wishMakeup.push({
-		name: makeupName,
-		returnedBrand: result
+		name: productType,
+		returnedBrand: brand
 	});
-	// console.log(result);
 }
 
 function refreshUI(list) {
 	var lis = '';
-	console.log(list);
+  console.log('refreshUI', list);
 	for (var i = 0; i < list.length; i++) {
 		// console.log(result);
 		lis += '<li data-key="' + list[i].key + '">' + list[i].name + ' ' + list[i].returnedBrand + ' [' + genLinks(list[i].key, list[i].name, list[i].returnedBrand) + ']</li>';
@@ -91,14 +89,14 @@ console.log("Tuesday");
 // 	}
 // };
 
-//edit 
+//edit
 function edit(key, muName) {
-	var makeupName = prompt("Update the makeup name", muName);
-	if(makeupName && makeupName.length > 0) {
+	var productType = prompt("Update the makeup name", muName);
+	if(productType && productType.length > 0) {
 		//build FB endpoint to item in makeup collection
 		var updateMakeupRef = buildEndPoint(key);
 		updateMakeupRef.update({
-			name: makeupName
+			name: productType
 		});
 	}
 }
@@ -134,13 +132,13 @@ wishMakeup.on("value", function(snapshot) {
 	var list = [];
 	for (var key in data) {
 		if(data.hasOwnProperty(key)) {
-			name = data[key].name ? data[key].name : '';
-			returnedBrand = data[key].returnedBrand ? data[key].returnedBrand : '';
+		        var name = data[key].name ? data[key].name : '';
+                        var returnedBrand = data[key].returnedBrand ? data[key].returnedBrand : '';
 			if(name.trim().length > 0) {
 				list.push({
 					name: name,
 					key: key,
-					returnedBrand: result
+					returnedBrand: returnedBrand
 				});
 			}
 		}
