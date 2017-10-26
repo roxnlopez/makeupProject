@@ -89,20 +89,6 @@ function saveToFB(productType, brand) {
 	});
 }
 
-/*
-<div class="item">
-		<i class="icon paint brush"></i>
-	<div class="content">
-		<span class="brandName">Aveda</span> <span class="productType">mascara</span>
-		<div class="ui mini buttons">
-			<button class="ui button">Edit</button>
-			<button class="ui button">Delete</button>
-			<button class="ui button"><i class="heart icon"></i></button>
-		</div>
-	</div>
-</div>
-*/
-
 function refreshUI(list) {
 	var lis = '';
   console.log('refreshUI', list);
@@ -115,8 +101,8 @@ function refreshUI(list) {
 		lis +=  '<div class="item">' +
 		         	'<i class="icon paint brush"></i>' +
 	            	'<div class="content">' +
-		            	'<span class="brandName">' + brand + '</span> <span class="productType">' + productType + '</span>' +
-								  	'<div class="ui mini buttons">' +
+		            	'<span class="brandName">' + brand + '</span> <span class="productType">' + productType + '</span>' + '&nbsp' + '&nbsp' + 
+								  	'<div class="ui black mini buttons">' +
 											'<button class="ui edit button" data-key="'+key+'" data-product="'+productType+'">Edit</button>' +
 											'<button class="ui delete button" data-key="'+key+'" data-product="'+productType+'">Delete</button>' +
 											'<button class="ui heart button"><i class="heart icon"></i></button>' +
