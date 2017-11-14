@@ -28,7 +28,7 @@ ol {
 #productType {
 	color: #CFB53B;
 	font-family: 'Slabo 27px', serif;
-	font-size: 1.3em;
+	font-size: 1.4em;
 	width: 17%;
 }
 
@@ -38,13 +38,14 @@ ol {
 	font-size: 1.3em;
 }
 
+
 /* links */
 a {
 	color: darkslategray;
 }
 
 a:hover {
-	color: tomato;
+	background-color: tomato;
 }
 
 a:active {
