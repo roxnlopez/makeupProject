@@ -66,7 +66,6 @@ limitations under the License.
     /**
      * Handles the sign up button press.
      */
-
     function handleSignUp() {
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
@@ -131,7 +130,7 @@ limitations under the License.
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';
           // document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-          if (!emailVerified) {
+          if (emailVerified) {
             document.getElementById('quickstart-verify-email').disabled = false;
             window.location = 'homePage.html';
           }
@@ -147,7 +146,6 @@ limitations under the License.
       document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
       document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
     }
-
     window.onload = function() {
       initApp();
     };
